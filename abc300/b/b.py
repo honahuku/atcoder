@@ -9,11 +9,13 @@ def vertical (array):
     print(array)
     print(new_arry)
     for i in range(H):
-        if i <= H:
+        if i <= H-1:
             logging.debug(i)
             logging.debug(array[i])
-            print(i,((i+1)%H),((i+1)%H),((i+2)%H))
-            new_arry[i][i], new_arry[((i+1)%H)][i] = array[((i+1)%H)][i], array[((i+2)%H)][i]
+            print(i, ((i+1)%(H-1)), ((i+2)%(H-1)))
+            new_arry[i][i], new_arry[((i+1)%(H-1))][i] = array[((i+1)%(H-1))][i], array[((i+2)%(H-1))][i]
+            
+            # iが0の時からnew_arryに値が入っていない？
             logging.debug(new_arry[i])
     return new_arry
 
