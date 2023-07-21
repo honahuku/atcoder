@@ -14,10 +14,10 @@ cd abc300/a
 
 # テスト
 # 個別のケース
-python3 a.py < tests/sample-1.in 
+python3 main.py < tests/sample-3.in 
 
 # すべてのケース
-oj t -c "python3 ./b.py" -d tests/
+oj t -c "python3 ./main.py" -d tests/
 
 # 提出
 acc s
