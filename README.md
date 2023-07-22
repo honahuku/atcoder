@@ -5,7 +5,7 @@
 
 ```bash
 npm install -g atcoder-cli
-pip3 install --user online-judge-tools
+python3 -m pip install --user online-judge-tools
 
 acc login
 acc session
