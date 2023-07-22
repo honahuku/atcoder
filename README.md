@@ -12,6 +12,8 @@ acc session
 oj login https://beta.atcoder.jp/
 acc new abc300
 
+acc add
+
 # 問題を選択
 cd abc300/a
 # ディレクトリにコンテスト情報を登録
@@ -19,14 +21,14 @@ oj d https://atcoder.jp/contests/abc300/tasks/abc300_b
 
 # テスト
 # 個別のケース
-python3 main.py < test/sample-3.in 
+python3 main.py < test/sample-1.in 
 
 # すべてのケース
-oj t -c "python3 ./main.py" -d tests/
+oj t -c "python3 ./main.py" -d test/
 
 # 提出
-# acc s
-oj s main.py
+acc s
+# oj s main.py
 ```
 参考:
 [atcoder-cli チュートリアル | わたしろぐ](http://tatamo.81.la/blog/2018/12/07/atcoder-cli-tutorial/)
