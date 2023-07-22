@@ -39,7 +39,11 @@
       "id": "abc311_d",
       "label": "D",
       "title": "Grid Ice Floor",
-      "url": "https://atcoder.jp/contests/abc311/tasks/abc311_d"
+      "url": "https://atcoder.jp/contests/abc311/tasks/abc311_d",
+      "directory": {
+        "path": "d",
+        "testdir": "test"
+      }
     },
     {
       "id": "abc311_e",
