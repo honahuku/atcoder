@@ -1,7 +1,7 @@
 # https://atcoder.jp/contests/abc300/tasks/abc300_b
 import logging
 
-# logging.basicConfig(format="%(message)s", level=logging.DEBUG)
+logging.basicConfig(format="%(message)s", level=logging.DEBUG)
 
 
 def main():
@@ -23,7 +23,7 @@ def main():
         for w in range(W):
             logging.debug(f"(h, w): ({h}, {w})")
             for _ in range(w):
-                new_array = horizontal(new_array, H, W)
+                new_array = horizontal(new_array, H, W, B)
                 # for line in new_array:
                 #     logging.debug("".join(line))
             # for line in new_array:
@@ -63,7 +63,7 @@ def vertical(array, H, W):
 
 
 # よこ
-def horizontal(array, H, W):
+def horizontal(array, H, W, B):
     new_array = [[""] * int(W) for _ in range(int(H))]
     for offset in range(W):
         # logging.debug("---")
@@ -76,6 +76,8 @@ def horizontal(array, H, W):
         for i in range(H):
             # logging.debug(f"i={i}")
             new_array[i][base] = array[i][offset]
+            if new_array == B:
+                logging.debug(f"{i},{base}")
         # logging.debug(f"{new_array}")
 
     return new_array

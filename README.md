@@ -7,20 +7,26 @@
 npm install -g atcoder-cli
 pip3 install --user online-judge-tools
 
+acc login
+acc session
+oj login https://beta.atcoder.jp/
 acc new abc300
 
 # 問題を選択
 cd abc300/a
+# ディレクトリにコンテスト情報を登録
+oj d https://atcoder.jp/contests/abc300/tasks/abc300_b
 
 # テスト
 # 個別のケース
-python3 main.py < tests/sample-3.in 
+python3 main.py < test/sample-3.in 
 
 # すべてのケース
 oj t -c "python3 ./main.py" -d tests/
 
 # 提出
-acc s
+# acc s
+oj s main.py
 ```
 参考:
 [atcoder-cli チュートリアル | わたしろぐ](http://tatamo.81.la/blog/2018/12/07/atcoder-cli-tutorial/)
