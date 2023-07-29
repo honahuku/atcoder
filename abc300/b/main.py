@@ -26,13 +26,15 @@ def main():
             # マス目(i,j)を全探索
             for i in range(H):
                 for j in range(W):
-                    logging.debug(
-                        f"s={s} t={t} i={i} j={j} A={A[(i - s + H) % H][(j - t + W) % W]} B={B[i][j]}"
-                    )
                     if A[(i - s + H) % H][(j - t + W) % W] != B[i][j]:
                         output = "No"
+                        break
+                if output == "No":
+                    break
+            if output == "Yes":
+                print(output)
+                return
     print(output)
-
 
 if __name__ == "__main__":
     main()
